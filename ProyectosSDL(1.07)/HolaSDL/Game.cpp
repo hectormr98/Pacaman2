@@ -3,10 +3,13 @@
 #include"GameMap.h"
 #include"Ghost.h"
 
+//Constructora de Game
 Game::Game()
 {
 	//pacman = new PacMan();
 
+	//inicializacion normal de la SDL
+	//visto en los slides de clase
 	int winX, winY;
 	winX = winY = SDL_WINDOWPOS_CENTERED;
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -14,8 +17,7 @@ Game::Game()
 	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	if (window == nullptr || render == nullptr)
 		cout << "Error initializing SDL" << endl;
-	//inicializacion normal de la SDL
-	//visto en los slides de clase
+
 
 	else {
 	//aqui va el codigo que queremos ejecutar
@@ -23,8 +25,8 @@ Game::Game()
 		LoadTextures();
 	}
 }
-//Constructora de Game
 
+//Lee de archivo y crea un tablero con la información dada
 bool Game::SetMap(string filename) {
 
 	int aux = 0;
@@ -54,12 +56,12 @@ bool Game::SetMap(string filename) {
 
 				else if(aux <9){
 					map->SetCell(i, j, Vacio);
-					ghosts[aux - 5] = new Ghost(this, i, j, render);
+					ghosts[aux - 5] = new Ghost(i, j, render);
 				}
 				else
 				{
 					map->SetCell(i, j, Vacio);
-					pacman = new PacMan(this, i, j, render);
+					pacman = new PacMan(i, j, render);
 				}
 
 			}
@@ -68,15 +70,15 @@ bool Game::SetMap(string filename) {
 	archivo.close();
 	return !archivo.fail();
 }
-//Lee de archivo y crea un tablero con la información dada
 
+//Carga la imagen del Menú
 void Game::LoadTextures() {
 
 	if (!menu->loadText("..\\images\\Pac-Titulo.png", 1, 2, render))error = true;
 	//menu
 }
-//Carga la imagen del Menú
 
+//Comprueba las casillas del tablero, y llama al renderizado de cada una (al GameMap, al Pac-Man y a los Fantasmas)
 void Game::Renderizado(){
 	SDL_RenderClear(render);
 	//const porque lo ponia en los slides 
@@ -135,8 +137,8 @@ void Game::Renderizado(){
 	SDL_RenderPresent(render);
 	//pintamos la escena
 }
-//Comprueba las casillas del tablero, y llama al renderizado de cada una (al GameMap, al Pac-Man y a los Fantasmas)
 
+//Hace que el Pac-Man se coma la comida y las vitaminas
 void Game::Update()
 {
 	if (map->tablero[pacman->getPosY()][pacman->getPosX()] == Comida)
@@ -152,8 +154,8 @@ void Game::Update()
 		map->SetCell(pacman->getPosX(), pacman->getPosY(), Vacio);
 	}
 }
-//Hace que el Pac-Man se coma la comida y las vitaminas
 
+//Comprueba si tu puntuación es igual a la puntuación máxima
 bool Game::finJuego()
 {
 	if (puntos >= maxPunt)
@@ -163,8 +165,8 @@ bool Game::finJuego()
 	else
 		return false;
 }
-//Comprueba si tu puntuación es igual a la puntuación máxima
 
+//Comprueba el choque entre Pac-Man y los Fantasmas
 void Game::Colision()
 {
 	for (int i = 0; i < 4; i++)
@@ -180,8 +182,8 @@ void Game::Colision()
 		}
 	}
 }
-//Comprueba el choque entre Pac-Man y los Fantasmas
 
+//Destructora de Game
 Game::~Game()
 {
 	for (int i = 0; i < 4; i++)
@@ -196,8 +198,8 @@ Game::~Game()
 	//destruimos todo
 	
 }
-//Destructora de Game
 
+//Comprueba pulsaciones de teclado y actua conforme a ello
 void Game::handleEvents() {
 	while (SDL_PollEvent(&evento))
 	{
@@ -225,27 +227,10 @@ void Game::handleEvents() {
 		}
 	}
 }
-//Comprueba pulsaciones de teclado y actua conforme a ello
 
+//Realiza los bucles principales del juego (Menu y juego), realizando sus correspondientes llamadas
 void Game::run()
 {
-	/*
-	enum estado = { meni, normal, save, etc..}
-	if(savestate) metodo saestate()
-
-	void savestate(){
-		sdl_event;
-		int code =0;
-		while(saveState && !exit){
-		sdl_waitEvebt(&event);
-		if(event.type == quit) exit = true;
-		else if(event.key.keysystem.sym>= sdlk_0 && <= 9)(pulsado de numero)
-			code = code * 10 + lectura de numero;
-		}
-	}
-	waitevent para el juego hasta que haya un evento
-
-	*/
 	while (!comienza)
 	{
 		MenuEvents();
@@ -277,15 +262,15 @@ void Game::run()
 		cout << "Ganaste!" << endl;
 	exit = true;
 }
-//Realiza los bucles principales del juego (Menu y juego), realizando sus correspondientes llamadas
 
+//Muestra en consola la puntuación del modo: *Puntuación Actual/Puntuación Máxima*
 void Game::GUI()
 {
 	system("cls");
 	cout << puntos << "/" << maxPunt << endl;
 }
-//Muestra en consola la puntuación del modo: *Puntuación Actual/Puntuación Máxima*
 
+//Comprueba si la casilla destino está disponible para desplazarse
 bool Game::NextCell(int y, int x, int dir)
 {
 	//Si se sale de pantalla hace recursión de NextCell en la posición contraria
@@ -325,8 +310,8 @@ bool Game::NextCell(int y, int x, int dir)
 		else return true;
 	
 }
-//Comprueba si la casilla destino está disponible para desplazarse
 
+//Animacion del menu
 void Game::Menu()
 {   
 	destRec.w = 300;
@@ -338,8 +323,8 @@ void Game::Menu()
 	menuAnim++;
 	if (menuAnim == 2) menuAnim = 0;
 }
-//Animacion del menu
 
+//Pulsación de Espacio en el menu
 void Game::MenuEvents()
 {
 	while (SDL_PollEvent(&evento))
@@ -356,4 +341,3 @@ void Game::MenuEvents()
 		}
 	}
 }
-//Pulsación de Espacio en el menu

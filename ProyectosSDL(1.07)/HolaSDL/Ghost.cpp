@@ -7,14 +7,13 @@ Ghost::Ghost() : GameCharacter(0,0){
 }
 //constructora default que deja el fantasma en la posicion (0,0)
 
-Ghost::Ghost(Game* game, int x, int y, SDL_Renderer* rend) : GameCharacter(x, y)
+Ghost::Ghost(int x, int y, SDL_Renderer* rend) : GameCharacter(x, y)
 {
-	this->game = game;
 	PosX = IniX = x;
 	PosY = IniY = y;
 	dir = 0;
 	rendering = rend;
-	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, rendering)) game->error = true;
+	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, rendering)) gueim->error = true;
 }
 //Constructora que situa al fantasma en una posicion dada
 

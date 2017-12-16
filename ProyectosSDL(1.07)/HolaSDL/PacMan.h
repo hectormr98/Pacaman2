@@ -25,7 +25,7 @@ private:
 	SDL_Renderer* render = nullptr;
 
 	int auxDir=0;
-	Game * game = nullptr;
+	//Game * game = nullptr;
 	estadoPacMan estado;
 	//posicion de pacman
 	int contador = 0;
@@ -50,7 +50,7 @@ public:
 	PacMan();
 	//constructora default
 
- 	PacMan(Game* game, int x, int y, SDL_Renderer* render);
+ 	PacMan(int x, int y, SDL_Renderer* render);
 	//constructora que situa pacman en una posicion
 
 	~PacMan();
