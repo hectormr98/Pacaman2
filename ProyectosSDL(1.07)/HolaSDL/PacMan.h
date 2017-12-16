@@ -1,8 +1,4 @@
 #pragma once
-#include<iostream>
-#include"Texture.h"
-#include "SDL.h"
-#include "SDL_image.h"
 #include"GameCharacter.h"
 
 class Game;
@@ -24,13 +20,10 @@ class PacMan: public GameCharacter
 {
 private:
 
-	Texture* textPac = new Texture();
+	//Texture* textPac = new Texture();
 
 	SDL_Renderer* render = nullptr;
 
-	int IniX=0, IniY=0;
-	int posX = IniX,
-		posY = IniY;
 	int auxDir=0;
 	Game * game = nullptr;
 	estadoPacMan estado;
@@ -39,7 +32,6 @@ private:
 	const int numTicks = 50;
 
 
-	int dir = 0;
 	int dir2 = 0;
 	/*
 	     /\

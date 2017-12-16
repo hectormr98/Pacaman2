@@ -2,35 +2,35 @@
 #include"Game.h"
 #include"GameMap.h"
 
-Ghost::Ghost() {
-	IniX = IniY = posX = posY = 0;
+Ghost::Ghost() : GameCharacter(0,0){
+	IniX = IniY = PosX = PosY = 0;
 }
 //constructora default que deja el fantasma en la posicion (0,0)
 
-Ghost::Ghost(Game* game, int x, int y, SDL_Renderer* rend)
+Ghost::Ghost(Game* game, int x, int y, SDL_Renderer* rend) : GameCharacter(x, y)
 {
 	this->game = game;
-	posX = IniX = x;
-	posY = IniY = y;
+	PosX = IniX = x;
+	PosY = IniY = y;
 	dir = 0;
-	render = rend;
-	if (!textGhost->loadText(("..\\images\\characters1.png"), 4, 14, render)) game->error = true;
+	rendering = rend;
+	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, rendering)) game->error = true;
 }
 //Constructora que situa al fantasma en una posicion dada
 
 int Ghost::getPosX() {
-	return posX;
+	return PosX;
 }
 //Devuelve su X
 
 int Ghost::getPosY() {
-	return posY;
+	return PosY;
 }
 //Devuelve su Y
 
 Ghost::~Ghost()
 {
-	delete textGhost;
+	delete text;
 }
 //Destructora de Ghost
 
@@ -41,7 +41,7 @@ void Ghost::CambiaDir()
 	vector<int> posible;
 	for (int i = 0; i < 4; i++)
 	{
-		if (game->NextCell(posX, posY, i) && i != (dir + 2) % 4)
+		if (game->NextCell(PosX, PosY, i) && i != (dir + 2) % 4)
 		{
 			contador++;
 			posible.push_back(i);
@@ -72,23 +72,23 @@ void Ghost::Mueve(int fils, int cols)
 	CambiaDir();
 		if (dir == 0)
 		{
-			posY = (posY + 1) % cols;
+			PosY = (PosY + 1) % cols;
 		}
 		else if (dir == 1)
 		{
-			posX = (posX + 1) % fils;
+			PosX = (PosX + 1) % fils;
 		}
 		else if (dir == 2)
 		{
-			if (posY - 1 < 0) posY = cols - 1;
+			if (PosY - 1 < 0) PosY = cols - 1;
 
-			else posY--;
+			else PosY--;
 		}
 		else if (dir == 3)
 		{
-			if (posX - 1 < 0) posX = fils - 1;
+			if (PosX - 1 < 0) PosX = fils - 1;
 
-			else posX--;
+			else PosX--;
 		}
 		if (anim == 1) anim = 0;
 		else anim = 1;
@@ -97,8 +97,8 @@ void Ghost::Mueve(int fils, int cols)
 //Mueve al fantasma en la direccion proporcionada por CambiaDir()
 
 void Ghost::SetInicio(){
-	posX = IniX;
-	posY = IniY;
+	PosX = IniX;
+	PosY = IniY;
 }
 //Devuelve al fantasma a su posicion inicial
 
@@ -107,14 +107,30 @@ void Ghost::RenderGhost(SDL_Rect rekt, int d, PacMan* pacman)
 	
 	if (pacman->Come)
 	{
-		textGhost->RenderFrame(12, 0, rekt, render);
+		text->RenderFrame(12, 0, rekt, rendering);
 	}
 	else
 	{
 		if (GetAnim() == 0)
-			textGhost->RenderFrame(d * 2, 0, rekt, render);
+			text->RenderFrame(d * 2, 0, rekt, rendering);
 		else
-			textGhost->RenderFrame(d * 2 + 1, 0, rekt, render);
+			text->RenderFrame(d * 2 + 1, 0, rekt, rendering);
 	}
 }
 //Pinta al fantasma y lo anima en sus distintos casos
+
+void Ghost::render() {
+
+}
+
+void Ghost::update() {
+
+}
+
+bool Ghost::loadFromFile(string file) {
+	return true;
+}
+
+bool Ghost::saveToFile(string file) {
+	return true;
+}

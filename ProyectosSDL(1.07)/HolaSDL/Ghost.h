@@ -1,28 +1,20 @@
 #pragma once
-#include"Texture.h"
-#include "SDL.h"
-#include "SDL_image.h"
-#include "PacMan.h"
 #include"GameCharacter.h"
 
 class Game;
 
-class Ghost:public GameCharacter
+class Ghost : public GameCharacter
 {
 private:
+	
+	//PacMan* pacman = nullptr;
 
-	PacMan* pacman = nullptr;
+	//Texture* textGhost = new Texture();
 
-	Texture* textGhost = new Texture();
+	SDL_Renderer* rendering = nullptr;
 
-	SDL_Renderer* render = nullptr;
-
-	int IniX=0, IniY=0;
-	int posX = IniX,
-		posY = IniY;
 	//posiciones actuales e iniciales del fantasma
 
-	int dir = 0;
 	int anim = 0;
 
 	Game* game = nullptr;
@@ -55,5 +47,10 @@ public:
 	void Mueve(int fils, int cols);
 	void CambiaDir();
 	void SetInicio();
+
+	void render();
+	void update();
+	bool loadFromFile(string filename);
+	bool saveToFile(string filename);
 };
 

@@ -10,11 +10,13 @@ class GameObject
 
 public:
 	GameObject();
-	~GameObject();
+	virtual ~GameObject()=0;
 	virtual void render()=0;
 	virtual void update()=0;
 	virtual bool loadFromFile(string filename) = 0;
 	virtual bool saveToFile(string filename) = 0;
+protected:
+	Game* gueim = nullptr;
 
 };
 
