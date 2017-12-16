@@ -2,31 +2,32 @@
 #include"Game.h"
 #include"GameMap.h"
 
-PacMan::PacMan() {
-	posX = posY = IniX = IniY = 0;
+PacMan::PacMan() : GameCharacter(0,0){
+	PosX = PosY = IniX = IniY = 0;
 	//si no le pasamos parametros, asumiremos que PacMan esta en la posicion (0,0)
 }
 //Constructora predeterminada
 
-PacMan::PacMan(Game* game, int x, int y, SDL_Renderer* rend)
+PacMan::PacMan(Game* game, int x, int y, SDL_Renderer* rend) : GameCharacter::GameCharacter(x, y)
 {
-	this->game = game;
-	posX = IniX = x;
-	posY = IniY = y;
+	//this->game = game;
+	gueim = game;
+	PosX = IniX = x;
+	PosY = IniY = y;
 	dir = 0;
 	render = rend;
-	if (!textPac->loadText(("..\\images\\characters1.png"), 4, 14, render)) game->error = true;
+	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, render)) game->error = true;
 	//le pasamos como parametros una x y una y, y situamos un PacMan en la posicion dada
 }
 //Constructora que coloca al Pac-Man
 
 int PacMan::getPosX() {
-	return posX;
+	return PosX;
 }
 //Devuelve la X
 
 int PacMan::getPosY() {
-	return posY;
+	return PosY;
 }
 //Devuelve la Y
 
@@ -79,33 +80,33 @@ void PacMan::CambiaEstado(int i)
 
 void PacMan::Mueve(int fils, int cols) 
 {
-	if ((dir2 == 0) && game->NextCell(posX, posY,dir2))
+	if ((dir2 == 0) && game->NextCell(PosX, PosY,dir2))
 	{
-		posY = (posY + 1)%cols;
+		PosY = (PosY + 1)%cols;
 		dir = dir2;
 		dir2 = -1;
 		estado = DerCerrado;
 	}
-	else if ((dir2 == 1) && game->NextCell(posX, posY, dir2))
+	else if ((dir2 == 1) && game->NextCell(PosX, PosY, dir2))
 	{
-		posX = (posX+1)%fils;
+		PosX = (PosX+1)%fils;
 		dir = dir2;
 		dir2 = -1;
 		estado = BotCerrado;
 	}
-	else if ((dir2 == 2) && game->NextCell(posX, posY, dir2))
+	else if ((dir2 == 2) && game->NextCell(PosX, PosY, dir2))
 	{
-		if (posY - 1 < 0) posY = cols - 1;
+		if (PosY - 1 < 0) PosY = cols - 1;
 
-		else posY--;
+		else PosY--;
 		dir = dir2;
 		dir2 = -1;
 		estado = IzqCerrado;
 	}
-	else if ((dir2 == 3) && game->NextCell(posX, posY, dir2))
+	else if ((dir2 == 3) && game->NextCell(PosX, PosY, dir2))
 	{
-		if (posX - 1 < 0) posX = fils - 1;
-		else posX--;
+		if (PosX - 1 < 0) PosX = fils - 1;
+		else PosX--;
 
 		dir = dir2;
 		dir2 = -1;
@@ -113,25 +114,25 @@ void PacMan::Mueve(int fils, int cols)
 	}
 
 
-	else if ((dir == 0) && game->NextCell(posX, posY, dir))
+	else if ((dir == 0) && game->NextCell(PosX, PosY, dir))
 	{
-		posY = (posY + 1)%cols;
+		PosY = (PosY + 1)%cols;
 	}
-	else if ((dir == 1) && game->NextCell(posX, posY, dir))
+	else if ((dir == 1) && game->NextCell(PosX, PosY, dir))
 	{
-		posX= (posX + 1) % fils;
+		PosX= (PosX + 1) % fils;
 	}
-	else if ((dir == 2) && game->NextCell(posX, posY, dir))
+	else if ((dir == 2) && game->NextCell(PosX, PosY, dir))
 	{
-		if (posY - 1 < 0) posY = cols - 1;
+		if (PosY - 1 < 0) PosY = cols - 1;
 
-		else posY--;
+		else PosY--;
 	}
-	else if ((dir == 3) && game->NextCell(posX, posY, dir))
+	else if ((dir == 3) && game->NextCell(PosX, PosY, dir))
 	{
-		if (posX - 1 < 0) posX = fils - 1;
+		if (PosX - 1 < 0) PosX = fils - 1;
 
-		else posX--;
+		else PosX--;
 	}
 
 }
@@ -150,7 +151,7 @@ estadoPacMan PacMan::getEstado() {
 
 PacMan::~PacMan()
 {
-	delete textPac;
+	delete text;
 }
 //Destructora de Pac-Man
 
@@ -187,13 +188,13 @@ void PacMan::RenderPac(SDL_Rect recta)
 			if (estado == f * 2)
 			{
 				CambiaEstado(f * 2 + 1);
-				textPac->RenderFrame(10, f, recta, render);
+				text->RenderFrame(10, f, recta, render);
 				acaba = true;
 			}
 			else
 			{
 				CambiaEstado(f * 2);
-				textPac->RenderFrame(11, f, recta, render);
+				text->RenderFrame(11, f, recta, render);
 			}
 		}
 		f++;

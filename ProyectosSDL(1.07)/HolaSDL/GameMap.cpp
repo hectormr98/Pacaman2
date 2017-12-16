@@ -4,14 +4,14 @@
 #include"Game.h"
 
 
-GameMap::GameMap(Game* gueim, int fils, int cols, SDL_Renderer* rend)
+GameMap::GameMap(Game* gueim, int fils, int cols, SDL_Renderer* rend) : GameObject()
 //constructora, le pasamos como parametros filas y columnas del mapa
 {
 	this->game = gueim;
 	Fils = fils;
 	Cols = cols;
 	//asignamos variables
-	render = rend;
+	rendering = rend;
 	tablero = new MapCells* [fils];
 	//creamos un nuevo tablero que tiene fils filas
 
@@ -24,13 +24,13 @@ GameMap::GameMap(Game* gueim, int fils, int cols, SDL_Renderer* rend)
 	{
 		textura[i] = new Texture();
 	}
-	if (!textura[0]->loadText("..\\images\\wall2.png", 1, 1, render))game->error = true;
+	if (!textura[0]->loadText("..\\images\\wall2.png", 1, 1, rendering))game->error = true;
 	//cargamos la textura 0 (muro) y si da error en la carga ponemos la bander a true
 
-	else if (!textura[1]->loadText("..\\images\\food2.png", 1, 1, render))game-> error = true;
+	else if (!textura[1]->loadText("..\\images\\food2.png", 1, 1, rendering))game-> error = true;
 	//analogo para la comida
 
-	else if (!textura[2]->loadText("..\\images\\burguer1.png", 1, 3, render)) game->error = true;
+	else if (!textura[2]->loadText("..\\images\\burguer1.png", 1, 3, rendering)) game->error = true;
 	//analogo para la vitamina
 }
 //Constructora de GameMap
@@ -64,12 +64,12 @@ void GameMap::SetCell(int x, int y, MapCells cell) {
 void GameMap::Renderizado(SDL_Rect destRec, int tipo)
 {
 	if (tipo == 0)
-		textura[0]->Render(destRec, render);
+		textura[0]->Render(destRec, rendering);
 	else if(tipo == 1)
-		textura[1]->Render(destRec, render);
+		textura[1]->Render(destRec, rendering);
 	else if (tipo == 2)
 	{
-			textura[2]->RenderFrame(animVit, 0, destRec, render);
+			textura[2]->RenderFrame(animVit, 0, destRec, rendering);
 	}
 
 }
@@ -80,3 +80,15 @@ void GameMap::AnimVit()
 	animVit= (animVit+1)%3;
 }
 //Cambia la animación de la vitamina
+
+bool GameMap::loadFromFile(string filename) {
+	return true;
+};
+
+void GameMap::render() {};
+
+void GameMap::update() {};
+
+bool GameMap::saveToFile(string filename) {
+	return true;
+};

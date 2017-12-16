@@ -4,15 +4,17 @@
 #include<iostream>
 #include<fstream>
 #include "Texture.h"
-#include"PacMan.h"
-#include"GameMap.h"
-#include"Ghost.h"
 #include<vector>
+
+class GameCharacter;
+class PacMan;
+class Ghost;
+class GameMap;
 
 
 using namespace std;
 
-class Game
+class Game 
 {
 private:
 	SDL_Window*window = nullptr;

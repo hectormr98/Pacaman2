@@ -1,8 +1,11 @@
 #include "Game.h"
+#include"PacMan.h"
+#include"GameMap.h"
+#include"Ghost.h"
 
 Game::Game()
 {
-	pacman = new PacMan();
+	//pacman = new PacMan();
 
 	int winX, winY;
 	winX = winY = SDL_WINDOWPOS_CENTERED;

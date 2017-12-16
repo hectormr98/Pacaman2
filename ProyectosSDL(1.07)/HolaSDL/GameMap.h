@@ -22,7 +22,7 @@ enum MapCells
 };
 //enumerable indicando todas las casillas disponibles en el juego
 
-class GameMap :public GameObject
+class GameMap : public GameObject
 {
 	friend class Game;
 	//Game puede acceder a campos privados de GameMap
@@ -40,7 +40,7 @@ private:
 
 	Texture* textura[3];
 
-	SDL_Renderer* render = nullptr;
+	SDL_Renderer* rendering = nullptr;
 	int animVit = 0;
 
 public:
@@ -60,5 +60,10 @@ public:
 	void Renderizado(SDL_Rect rect, int tipo);
 
 	void AnimVit();
+
+	bool loadFromFile(string filename);
+	void render();
+	void update();
+	bool saveToFile(string filename);
 };
 
