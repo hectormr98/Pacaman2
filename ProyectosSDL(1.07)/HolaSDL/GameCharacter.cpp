@@ -31,6 +31,6 @@ GameCharacter::~GameCharacter()
 }
 
 bool GameCharacter::loadFromFile(string filename) { return true; }
-void GameCharacter::render(){}
+void GameCharacter::Render(){}
 void GameCharacter::update(){}
 bool GameCharacter::saveToFile(string filename) { return true; }

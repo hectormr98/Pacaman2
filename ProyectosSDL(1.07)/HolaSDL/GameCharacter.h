@@ -16,10 +16,13 @@ protected:
 		PosY;
 
 	int dir = 0;
+
 	Texture* text = nullptr;
 
+	SDL_Renderer* render = nullptr;
+
 	bool loadFromFile(string filename);
-	void render();
+	void Render();
 	void update();
 	bool saveToFile(string filename);
 };

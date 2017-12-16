@@ -200,3 +200,8 @@ void PacMan::RenderPac(SDL_Rect recta)
 	}
 }
 //Pinta a Pac-Man y a sus respectivas animaciones
+
+void PacMan::Update() {  }
+void PacMan::Render() {}
+bool PacMan::saveToFile(string filename) { return true; }
+bool PacMan::loadFromFile(string filename) { return true; }

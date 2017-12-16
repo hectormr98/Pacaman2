@@ -22,7 +22,7 @@ private:
 
 	//Texture* textPac = new Texture();
 
-	SDL_Renderer* render = nullptr;
+	//SDL_Renderer* render = nullptr;
 
 	int auxDir=0;
 	//Game * game = nullptr;
@@ -68,5 +68,10 @@ public:
 	void CambiaEstado(int i);
 	void Contador();
 	//metodos auxiliares
+
+	void Render();
+	void Update();
+	bool loadFromFile(string filename);
+	bool saveToFile(string filename);
 };
 

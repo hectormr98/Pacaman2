@@ -27,7 +27,7 @@ class GameMap : public GameObject
 	friend class Game;
 	//Game puede acceder a campos privados de GameMap
 private:
-	Game* game = nullptr;
+	//Game* game = nullptr;
 
 	int Fils, Cols;
 	//tamaño del tablero
@@ -45,7 +45,7 @@ private:
 
 public:
 
-	GameMap(Game* gueim, int fils, int cols, SDL_Renderer* render);
+	GameMap(int fils, int cols, SDL_Renderer* render);
 	//constructora que crea un tablero de fils X cols
 
 	~GameMap();
@@ -62,7 +62,7 @@ public:
 	void AnimVit();
 
 	bool loadFromFile(string filename);
-	void render();
+	void Render();
 	void update();
 	bool saveToFile(string filename);
 };

@@ -4,10 +4,9 @@
 #include"Game.h"
 
 
-GameMap::GameMap(Game* gueim, int fils, int cols, SDL_Renderer* rend) : GameObject()
+GameMap::GameMap(int fils, int cols, SDL_Renderer* rend) : GameObject()
 //constructora, le pasamos como parametros filas y columnas del mapa
 {
-	this->game = gueim;
 	Fils = fils;
 	Cols = cols;
 	//asignamos variables
@@ -24,13 +23,13 @@ GameMap::GameMap(Game* gueim, int fils, int cols, SDL_Renderer* rend) : GameObje
 	{
 		textura[i] = new Texture();
 	}
-	if (!textura[0]->loadText("..\\images\\wall2.png", 1, 1, rendering))game->error = true;
+	if (!textura[0]->loadText("..\\images\\wall2.png", 1, 1, rendering))gueim->error = true;
 	//cargamos la textura 0 (muro) y si da error en la carga ponemos la bander a true
 
-	else if (!textura[1]->loadText("..\\images\\food2.png", 1, 1, rendering))game-> error = true;
+	else if (!textura[1]->loadText("..\\images\\food2.png", 1, 1, rendering))gueim-> error = true;
 	//analogo para la comida
 
-	else if (!textura[2]->loadText("..\\images\\burguer1.png", 1, 3, rendering)) game->error = true;
+	else if (!textura[2]->loadText("..\\images\\burguer1.png", 1, 3, rendering)) gueim->error = true;
 	//analogo para la vitamina
 }
 //Constructora de GameMap
@@ -85,7 +84,7 @@ bool GameMap::loadFromFile(string filename) {
 	return true;
 };
 
-void GameMap::render() {};
+void GameMap::Render() {};
 
 void GameMap::update() {};
 
