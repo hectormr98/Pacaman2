@@ -17,68 +17,70 @@ using namespace std;
 class Game 
 {
 private:
-	SDL_Window*window = nullptr;
 	//variables window de la SDL
+	SDL_Window*window = nullptr;
 
-	SDL_Renderer* render = nullptr;
 	//variable render de la SDL
+	SDL_Renderer* render = nullptr;
 
-	GameMap* map = nullptr;
 	//puntero a mapa del juego
+	GameMap* map = nullptr;
 
-	PacMan* pacman = nullptr;
 	//puntero a pacman
+	PacMan* pacman = nullptr;
 
-	Ghost* ghosts[4];
 	//array de punteros a fantasmas
+	Ghost* ghosts[4];
 
-	vector<Texture*>texturas;
 	//vector de punteros a texturas
+	vector<Texture*>texturas;
+
+	//textura del menu
 	Texture* menu = new Texture();
-
-	SDL_Rect destRec;
+	
 	//rectangulo destino, donde se pintara algo en pantalla
+	SDL_Rect destRec;
 
+	//para detectar eventos
 	SDL_Event evento;
 
-	bool exit = false;
 	//variable para controlar el final de la ventana
+	bool exit = false;
 
 	bool comienza = false;
 
 	int menuAnim = 0;
 
+	//dimensiones de la pantalla
 	int WinWidth = 800;
 	int WinHeight = 600;
-	//dimensiones de la pantalla
 
-
+	//filas y columnas del mapa
 	int Fils = 0,
 		Cols = 0;
-	//filas y columnas del mapa
 
 	int puntos = 0;
 	int maxPunt = 0;
 
-	const int numText = 4;
 	//numero de imagenes o texturas que se van a cargar
+	const int numText = 4;
 
 public:
 
-	bool error = false;
 	//variable para comprobar si ha habido un error en la carga de un archivo
+	bool error = false;
 
-	Game();
 	//constructora, inicializa todo
+	Game();
 
-	~Game();
 	//destructora, deja todo a nullptr o lo destruye
+	~Game();
 
-	bool SetMap(string filename);
 	//carga un mapa de un fichero de texto dado
+	bool SetMap(string filename);
 
-	void LoadTextures();
 	//carga todas las texturas (en este caso, 4)
+	void LoadTextures();
 	
 	void GUI();
 

@@ -38,7 +38,7 @@ bool Game::SetMap(string filename) {
 
 	if (!archivo.fail()) {
 		archivo >> Fils >> Cols;
-		map = new GameMap(this, Fils, Cols, render);
+		map = new GameMap(Fils, Cols, render);
 
 		for (int i = 0; i < Fils; i++) {
 			for (int j = 0; j < Cols; j++) {
