@@ -8,15 +8,14 @@ PacMan::PacMan() : GameCharacter(0,0){
 }
 //Constructora predeterminada
 
-PacMan::PacMan(Game* game, int x, int y, SDL_Renderer* rend) : GameCharacter::GameCharacter(x, y)
+PacMan::PacMan(int x, int y, SDL_Renderer* rend) : GameCharacter::GameCharacter(x, y)
 {
 	//this->game = game;
-	gueim = game;
 	PosX = IniX = x;
 	PosY = IniY = y;
 	dir = 0;
 	render = rend;
-	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, render)) game->error = true;
+	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, render)) gueim->error = true;
 	//le pasamos como parametros una x y una y, y situamos un PacMan en la posicion dada
 }
 //Constructora que coloca al Pac-Man
@@ -80,21 +79,21 @@ void PacMan::CambiaEstado(int i)
 
 void PacMan::Mueve(int fils, int cols) 
 {
-	if ((dir2 == 0) && game->NextCell(PosX, PosY,dir2))
+	if ((dir2 == 0) && gueim->NextCell(PosX, PosY,dir2))
 	{
 		PosY = (PosY + 1)%cols;
 		dir = dir2;
 		dir2 = -1;
 		estado = DerCerrado;
 	}
-	else if ((dir2 == 1) && game->NextCell(PosX, PosY, dir2))
+	else if ((dir2 == 1) && gueim->NextCell(PosX, PosY, dir2))
 	{
 		PosX = (PosX+1)%fils;
 		dir = dir2;
 		dir2 = -1;
 		estado = BotCerrado;
 	}
-	else if ((dir2 == 2) && game->NextCell(PosX, PosY, dir2))
+	else if ((dir2 == 2) && gueim->NextCell(PosX, PosY, dir2))
 	{
 		if (PosY - 1 < 0) PosY = cols - 1;
 
@@ -103,7 +102,7 @@ void PacMan::Mueve(int fils, int cols)
 		dir2 = -1;
 		estado = IzqCerrado;
 	}
-	else if ((dir2 == 3) && game->NextCell(PosX, PosY, dir2))
+	else if ((dir2 == 3) && gueim->NextCell(PosX, PosY, dir2))
 	{
 		if (PosX - 1 < 0) PosX = fils - 1;
 		else PosX--;
@@ -114,21 +113,21 @@ void PacMan::Mueve(int fils, int cols)
 	}
 
 
-	else if ((dir == 0) && game->NextCell(PosX, PosY, dir))
+	else if ((dir == 0) && gueim->NextCell(PosX, PosY, dir))
 	{
 		PosY = (PosY + 1)%cols;
 	}
-	else if ((dir == 1) && game->NextCell(PosX, PosY, dir))
+	else if ((dir == 1) && gueim->NextCell(PosX, PosY, dir))
 	{
 		PosX= (PosX + 1) % fils;
 	}
-	else if ((dir == 2) && game->NextCell(PosX, PosY, dir))
+	else if ((dir == 2) && gueim->NextCell(PosX, PosY, dir))
 	{
 		if (PosY - 1 < 0) PosY = cols - 1;
 
 		else PosY--;
 	}
-	else if ((dir == 3) && game->NextCell(PosX, PosY, dir))
+	else if ((dir == 3) && gueim->NextCell(PosX, PosY, dir))
 	{
 		if (PosX - 1 < 0) PosX = fils - 1;
 

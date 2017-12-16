@@ -15,8 +15,9 @@ public:
 	virtual void update()=0;
 	virtual bool loadFromFile(string filename) = 0;
 	virtual bool saveToFile(string filename) = 0;
+
 protected:
-	Game* gueim = nullptr;
+	Game* gueim = new Game();
 
 };
 
