@@ -1,4 +1,5 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (pacman.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+<<<<<<< HEAD
   PacMan.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(11): error C2511: 'PacMan::PacMan(int,int,SDL_Renderer *,Game *)': la función miembro sobrecargada no se ha encontrado en 'PacMan'
   c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.h(19): note: vea la declaración de 'PacMan'
@@ -17,3 +18,13 @@ c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\g
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\game.cpp(64): error C2664: 'PacMan::PacMan(const PacMan &)': el argumento 4 no puede convertirse de 'Game *' a 'Game'
   c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\game.cpp(64): note: Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
   Generando código...
+=======
+<<<<<<< HEAD
+  Game.cpp
+c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\game.cpp(312): warning C4715: 'Game::NextCell': no todas las rutas de acceso de control devuelven un valor
+  HolaSDL.vcxproj -> C:\Users\pekev\OneDrive\Documentos\GitHub\Pacaman2\ProyectosSDL(1.07)\bin\HolaSDLDebug.exe
+=======
+  GameMap.cpp
+  HolaSDL.vcxproj -> C:\Users\hecto\UNIVERSIDAD\2º\TPV\Pacaman2\Pacaman\ProyectosSDL(1.07)\bin\HolaSDLDebug.exe
+>>>>>>> 8cae29a4b5a6c714d6342dee308e2c3afff4ed09
+>>>>>>> 33964d21090e4f992d4b7ed776bc07a435979f6d
