@@ -2,15 +2,14 @@
 #include"Game.h"
 #include"GameMap.h"
 
-PacMan::PacMan() : GameCharacter(0,0){
+PacMan::PacMan() : GameCharacter(0,0,nullptr ){
 	PosX = PosY = IniX = IniY = 0;
 	//si no le pasamos parametros, asumiremos que PacMan esta en la posicion (0,0)
 }
 //Constructora predeterminada
 
-PacMan::PacMan(int x, int y, SDL_Renderer* rend) : GameCharacter::GameCharacter(x, y)
+PacMan::PacMan(int x, int y, SDL_Renderer* rend, Game* game) : GameCharacter::GameCharacter(x, y, game)
 {
-	//this->game = game;
 	PosX = IniX = x;
 	PosY = IniY = y;
 	dir = 0;

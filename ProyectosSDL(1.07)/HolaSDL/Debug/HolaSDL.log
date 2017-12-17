@@ -1,3 +1,19 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (pacman.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  GameMap.cpp
-  HolaSDL.vcxproj -> C:\Users\hecto\UNIVERSIDAD\2º\TPV\Pacaman2\Pacaman\ProyectosSDL(1.07)\bin\HolaSDLDebug.exe
+  PacMan.cpp
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(11): error C2511: 'PacMan::PacMan(int,int,SDL_Renderer *,Game *)': la función miembro sobrecargada no se ha encontrado en 'PacMan'
+  c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.h(19): note: vea la declaración de 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(12): error C2550: 'PacMan::{ctor}': las listas de inicializadores de constructor solo se permiten en las definiciones de constructor
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(13): error C2597: referencia no válida a miembro no static 'GameCharacter::IniX'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(14): error C2597: referencia no válida a miembro no static 'GameCharacter::IniY'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(15): error C2597: referencia no válida a miembro no static 'GameCharacter::dir'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(16): error C2597: referencia no válida a miembro no static 'GameCharacter::render'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(17): error C2227: el operando izquierdo de '->loadText' debe señalar al tipo class/struct/union/generic
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(17): error C2597: referencia no válida a miembro no static 'GameCharacter::render'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(17): error C2227: el operando izquierdo de '->error' debe señalar al tipo class/struct/union/generic
+  Ghost.cpp
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\ghost.cpp(5): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 2 argumentos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\ghost.cpp(11): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 2 argumentos
+  Game.cpp
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\game.cpp(64): error C2664: 'PacMan::PacMan(const PacMan &)': el argumento 4 no puede convertirse de 'Game *' a 'Game'
+  c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\game.cpp(64): note: Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+  Generando código...

@@ -2,7 +2,7 @@
 
 
 
-GameCharacter::GameCharacter(int posx, int posy)
+GameCharacter::GameCharacter(int posx, int posy, Game* game)
 {
 	PosX = posx;
 	PosY = posy;
@@ -11,6 +11,10 @@ GameCharacter::GameCharacter(int posx, int posy)
 	IniY = posy;
 
 	text = new Texture();
+
+	dir = 0;
+
+	gueim = game;
 	/*GO->render = {
 	
 	};*/
