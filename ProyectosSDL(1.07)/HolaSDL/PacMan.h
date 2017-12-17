@@ -43,18 +43,15 @@ private:
 	     \/
 	*/
 public:
-
-	bool Come = false;
-
-
 	PacMan();
 	//constructora default
 
- 	PacMan(int x, int y, SDL_Renderer* render, Game game);
+	PacMan(int x, int y, SDL_Renderer* render, Game* game);
 	//constructora que situa pacman en una posicion
 
 	~PacMan();
 	//destructora
+	bool Come = false;
 	void RestartContador();
 	void Mueve(int fils, int cols);
 	void CambiaDir(int newdir);
