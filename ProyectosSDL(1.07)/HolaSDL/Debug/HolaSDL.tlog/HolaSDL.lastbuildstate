@@ -1,6 +1,2 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
-<<<<<<< HEAD
 Debug|Win32|C:\Users\pekev\OneDrive\Documentos\GitHub\Pacaman2\ProyectosSDL(1.07)\|
-=======
-Debug|Win32|C:\Users\hecto\UNIVERSIDAD\2º\TPV\Pacaman2\Pacaman\ProyectosSDL(1.07)\|
->>>>>>> 8cae29a4b5a6c714d6342dee308e2c3afff4ed09

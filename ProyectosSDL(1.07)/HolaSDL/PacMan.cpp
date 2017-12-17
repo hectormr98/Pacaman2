@@ -79,7 +79,7 @@ void PacMan::CambiaEstado(int i)
 
 void PacMan::Mueve(int fils, int cols) 
 {
-	if ((dir2 == 0) && gueim->NextCell(PosX, PosY,dir2))
+	if ((dir2 == 0)&& gueim->NextCell(PosX, PosY,dir2))
 	{
 		PosY = (PosY + 1)%cols;
 		dir = dir2;
