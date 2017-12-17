@@ -6,7 +6,7 @@ using namespace std;
 class GameCharacter : public GameObject
 {
 public:
-	GameCharacter(int x, int y);
+	GameCharacter(int x, int y, Game* game);
 	~GameCharacter();
 protected:
 	

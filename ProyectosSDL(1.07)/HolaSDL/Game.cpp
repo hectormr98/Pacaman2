@@ -61,7 +61,7 @@ bool Game::SetMap(string filename) {
 				else
 				{
 					map->SetCell(i, j, Vacio);
-					pacman = new PacMan(i, j, render);
+					pacman = new PacMan(i, j, render, this);
 				}
 
 			}

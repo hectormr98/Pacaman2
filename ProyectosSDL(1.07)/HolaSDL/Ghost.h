@@ -17,7 +17,9 @@ private:
 
 	int anim = 0;
 
-	Game* game = nullptr;
+	//Game* game = nullptr;
+
+
 	/*
 	     /\
 	     |
