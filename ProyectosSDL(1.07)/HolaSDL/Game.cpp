@@ -2,6 +2,7 @@
 #include"PacMan.h"
 #include"GameMap.h"
 #include"Ghost.h"
+#include "SmartGhost.h"
 
 //Constructora de Game
 Game::Game()
@@ -23,11 +24,13 @@ Game::Game()
 	//aqui va el codigo que queremos ejecutar
 		SetMap("Level01.dat");
 		LoadTextures();
+
 	}
 }
 
 //Lee de archivo y crea un tablero con la información dada
 bool Game::SetMap(string filename) {
+
 
 	int aux = 0;
 	//variable auxiliar para leer de archivo y asignar los distintos tipos de casillas
@@ -56,7 +59,7 @@ bool Game::SetMap(string filename) {
 
 				else if(aux <9){
 					map->SetCell(i, j, Vacio);
-					ghosts[aux - 5] = new Ghost(i, j, render);
+					ghosts[aux - 5] = new Ghost(i, j, render, this);
 				}
 				else
 				{
@@ -67,6 +70,7 @@ bool Game::SetMap(string filename) {
 			}
 		}
 	}
+	smart = new SmartGhost(1, 1, render, this);
 	archivo.close();
 	return !archivo.fail();
 }
@@ -131,6 +135,7 @@ void Game::Renderizado(){
 			{
 				pacman->RenderPac(destRec);
 			}
+			if (smart->getPosX() == j && smart->getPosY() == i) smart->RenderGhost(destRec,1, pacman);
 			//Renderizado de PacMan
 		}
 	}
@@ -245,6 +250,7 @@ void Game::run()
 		Update();
 		Renderizado();
 		pacman->Mueve(Fils,Cols);
+		smart->Mueve(Fils, Cols);
 		Colision();
 		for (int i = 0; i < 4; i++)
 		{

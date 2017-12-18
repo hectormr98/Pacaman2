@@ -2,18 +2,18 @@
 #include"Game.h"
 #include"GameMap.h"
 
-Ghost::Ghost() : GameCharacter(0,0, gueim){
+Ghost::Ghost() : GameCharacter(0,0, nullptr){
 	IniX = IniY = PosX = PosY = 0;
 }
 //constructora default que deja el fantasma en la posicion (0,0)
 
-Ghost::Ghost(int x, int y, SDL_Renderer* rend) : GameCharacter(x, y, gueim)
+Ghost::Ghost(int x, int y, SDL_Renderer* rend, Game* game) : GameCharacter(x, y, game)
 {
 	PosX = IniX = x;
 	PosY = IniY = y;
 	dir = 0;
-	rendering = rend;
-	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, rendering)) gueim->error = true;
+	render = rend;
+	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, render)) gueim->error = true;
 }
 //Constructora que situa al fantasma en una posicion dada
 
@@ -106,19 +106,19 @@ void Ghost::RenderGhost(SDL_Rect rekt, int d, PacMan* pacman)
 	
 	if (pacman->Come)
 	{
-		text->RenderFrame(12, 0, rekt, rendering);
+		text->RenderFrame(12, 0, rekt, render);
 	}
 	else
 	{
 		if (GetAnim() == 0)
-			text->RenderFrame(d * 2, 0, rekt, rendering);
+			text->RenderFrame(d * 2, 0, rekt, render);
 		else
-			text->RenderFrame(d * 2 + 1, 0, rekt, rendering);
+			text->RenderFrame(d * 2 + 1, 0, rekt, render);
 	}
 }
 //Pinta al fantasma y lo anima en sus distintos casos
 
-void Ghost::render() {
+void Ghost::Render() {
 
 }
 

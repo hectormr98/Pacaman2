@@ -10,7 +10,7 @@ class GameCharacter;
 class PacMan;
 class Ghost;
 class GameMap;
-
+class SmartGhost;
 
 using namespace std;
 
@@ -26,6 +26,8 @@ private:
 	//puntero a mapa del juego
 	GameMap* map = nullptr;
 
+	SmartGhost* smart = nullptr;
+	
 	//puntero a pacman
 	PacMan* pacman = nullptr;
 
