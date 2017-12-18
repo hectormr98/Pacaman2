@@ -5,11 +5,13 @@
 #include<fstream>
 #include "Texture.h"
 #include<vector>
+#include"SmartGhost.h"
 
 class GameCharacter;
 class PacMan;
 class Ghost;
 class GameMap;
+class SmartGhost;
 
 
 using namespace std;
@@ -25,6 +27,9 @@ private:
 
 	//puntero a mapa del juego
 	GameMap* map = nullptr;
+
+	//fantama inteligente de prueba
+	SmartGhost* smart = nullptr;
 
 	//puntero a pacman
 	PacMan* pacman = nullptr;

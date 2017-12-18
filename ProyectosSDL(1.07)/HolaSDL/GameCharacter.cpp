@@ -1,8 +1,6 @@
 #include "GameCharacter.h"
 
-
-
-GameCharacter::GameCharacter(int posx, int posy, Game* game)
+GameCharacter::GameCharacter(int posx, int posy, Game* game, SDL_Renderer* rend) : GameObject()
 {
 	PosX = posx;
 	PosY = posy;
@@ -15,6 +13,8 @@ GameCharacter::GameCharacter(int posx, int posy, Game* game)
 	dir = 0;
 
 	gueim = game;
+
+	render = rend;
 	/*GO->render = {
 	
 	};*/

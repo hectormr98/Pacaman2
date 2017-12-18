@@ -9,7 +9,7 @@ private:
 
 	//Texture* textGhost = new Texture();
 
-	SDL_Renderer* rendering = nullptr;
+	//SDL_Renderer* rendering = nullptr;
 
 	//posiciones actuales e iniciales del fantasma
 
@@ -33,7 +33,7 @@ public:
 	SmartGhost();
 	//constructora default, situa fantasma en (0,0)
 
-	SmartGhost(int x, int y, SDL_Renderer* rend);
+	SmartGhost(int x, int y, SDL_Renderer* rend, Game* game);
 	//constructora que situa al fantasma en posicion (x,y)
 
 	~SmartGhost();

@@ -56,16 +56,16 @@ bool Game::SetMap(string filename) {
 
 				else if(aux <9){
 					map->SetCell(i, j, Vacio);
-					ghosts[aux - 5] = new Ghost(i, j, render);
+					ghosts[aux - 5] = new Ghost(i, j, render, this);
 				}
 				else
 				{
 					map->SetCell(i, j, Vacio);
 					pacman = new PacMan(i, j, render, this);
 				}
-
 			}
 		}
+		smart = new SmartGhost(1, 1, render, this);
 	}
 	archivo.close();
 	return !archivo.fail();

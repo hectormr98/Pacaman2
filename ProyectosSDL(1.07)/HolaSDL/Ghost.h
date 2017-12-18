@@ -34,7 +34,7 @@ public:
 	Ghost();
 	//constructora default, situa fantasma en (0,0)
 
-	Ghost(int x, int y, SDL_Renderer* rend);
+	Ghost(int x, int y, SDL_Renderer* rend, Game* game);
 	//constructora que situa al fantasma en posicion (x,y)
 
 	~Ghost();
