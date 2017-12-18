@@ -1,5 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (pacman.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
   SmartGhost.cpp
+<<<<<<< HEAD
 c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\smartghost.cpp(80): warning C4018: '<': no coinciden signed/unsigned
 c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\smartghost.cpp(88): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
 c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\smartghost.cpp(89): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
@@ -9,3 +10,13 @@ c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\sm
 c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\smartghost.cpp(151): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
 c:\users\pekev\onedrive\documentos\github\pacaman2\proyectossdl(1.07)\holasdl\smartghost.cpp(152): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
   HolaSDL.vcxproj -> C:\Users\pekev\OneDrive\Documentos\GitHub\Pacaman2\ProyectosSDL(1.07)\bin\HolaSDLDebug.exe
+=======
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(79): warning C4018: '<': no coinciden signed/unsigned
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(87): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(88): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(68): warning C4101: 'auxMax': variable local sin referencia
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(146): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(147): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+  LINK : no se encontró C:\Users\hecto\UNIVERSIDAD\2º\TPV\Pacaman2\Pacaman\ProyectosSDL(1.07)\bin\HolaSDLDebug.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  HolaSDL.vcxproj -> C:\Users\hecto\UNIVERSIDAD\2º\TPV\Pacaman2\Pacaman\ProyectosSDL(1.07)\bin\HolaSDLDebug.exe
+>>>>>>> 0576ec09e42f1c006202e9d3883d2bfd0140cbeb
