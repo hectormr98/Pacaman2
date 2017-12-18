@@ -63,7 +63,7 @@ void SmartGhost::CambiaDir()
 	else
 	{
 		PacMan pac;
-		int contador;
+		int contador = 0;
 		int j = 0;
 		float auxMax;
 		float distancia = 200000;
