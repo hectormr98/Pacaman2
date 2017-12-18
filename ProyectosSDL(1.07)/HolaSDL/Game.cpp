@@ -341,3 +341,11 @@ void Game::MenuEvents()
 		}
 	}
 }
+int Game::PacManX()
+{
+	return(pacman->getPosX());
+}
+int Game::PacManY()
+{
+	return(pacman->getPosY());
+}
