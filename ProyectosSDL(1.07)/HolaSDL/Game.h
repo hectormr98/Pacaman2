@@ -95,5 +95,7 @@ public:
 	bool finJuego();
 	void Menu();
 	void MenuEvents();
+	int PacManX();
+	int PacManY();
 };
 
