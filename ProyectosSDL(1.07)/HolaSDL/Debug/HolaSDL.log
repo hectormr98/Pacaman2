@@ -3,55 +3,43 @@
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C2143: error de sintaxis: falta ';' delante de '*'
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C2238: símbolos (token) inesperados delante de ';'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(9): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(10): error C2061: error de sintaxis: identificador 'Game'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
+  SmartGhost.cpp
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(6): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(12): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(79): warning C4018: '<': no coinciden signed/unsigned
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(87): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(88): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(148): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(149): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(150): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(151): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
   PacMan.cpp
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(5): error C2504: 'GameCharacter': clase base sin definir
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(5): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(15): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
   Ghost.cpp
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(5): error C2504: 'GameCharacter': clase base sin definir
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\ghost.cpp(5): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\ghost.cpp(11): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
   GameObject.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(7): error C2504: 'GameObject': clase base sin definir
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(9): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(10): error C2061: error de sintaxis: identificador 'Game'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
   GameMap.cpp
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(5): error C2504: 'GameCharacter': clase base sin definir
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
   GameCharacter.cpp
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(5): error C2504: 'GameCharacter': clase base sin definir
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
   Game.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C2143: error de sintaxis: falta ';' delante de '*'
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C2238: símbolos (token) inesperados delante de ';'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(9): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(36): error C2061: error de sintaxis: identificador 'Game'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(42): error C2061: error de sintaxis: identificador 'PacMan'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\game.cpp(69): error C2661: 'SmartGhost::SmartGhost': ninguna función sobrecargada acepta 4 argumentos
-  Generando código...
-  Compilando...
-  SmartGhost.cpp
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(6): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(12): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(16): error C2065: 'rendering': identificador no declarado
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(17): error C2065: 'rendering': identificador no declarado
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(79): warning C4018: '<': no coinciden signed/unsigned
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(87): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(88): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(146): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(147): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(151): error C2065: 'rendering': identificador no declarado
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(156): error C2065: 'rendering': identificador no declarado
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(158): error C2065: 'rendering': identificador no declarado
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(10): error C2061: error de sintaxis: identificador 'Game'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\game.cpp(138): error C2660: 'SmartGhost::RenderGhost': la función no acepta 3 argumentos
   Generando código...

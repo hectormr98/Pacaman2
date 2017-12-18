@@ -1,5 +1,12 @@
 #include "GameCharacter.h"
 
+GameCharacter::GameCharacter() : GameObject() {
+	IniX = IniY = PosX = PosY = dir = 0;
+	text = nullptr;
+	gueim = nullptr;
+	render = nullptr;
+}
+
 GameCharacter::GameCharacter(int posx, int posy, Game* game, SDL_Renderer* rend) : GameObject()
 {
 	PosX = posx;

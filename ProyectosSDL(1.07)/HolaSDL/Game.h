@@ -13,7 +13,6 @@ class Ghost;
 class GameMap;
 class SmartGhost;
 
-
 using namespace std;
 
 class Game 

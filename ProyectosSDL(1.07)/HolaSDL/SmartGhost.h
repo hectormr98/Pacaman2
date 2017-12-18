@@ -1,6 +1,8 @@
 #pragma once
 #include"GameCharacter.h"
 
+class Game;
+
 class SmartGhost : public GameCharacter
 {
 private:
@@ -49,7 +51,7 @@ public:
 	void CambiaDir();
 	void SetInicio();
 
-	void render();
+	void Render();
 	void update();
 	bool loadFromFile(string filename);
 	bool saveToFile(string filename);

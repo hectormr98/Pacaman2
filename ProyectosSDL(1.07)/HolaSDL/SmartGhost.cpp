@@ -13,8 +13,8 @@ SmartGhost::SmartGhost(int x, int y, SDL_Renderer* rend, Game* game) : GameChara
 	PosX = IniX = x;
 	PosY = IniY = y;
 	dir = 0;
-	rendering = rend;
-	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, rendering)) gueim->error = true;
+	render = rend;
+	if (!text->loadText(("..\\images\\characters1.png"), 4, 14, render)) gueim->error = true;
 }
 //Constructora que situa al fantasma en una posicion dada
 
@@ -36,6 +36,7 @@ SmartGhost::~SmartGhost()
 
 void SmartGhost::CambiaDir()
 {
+
 	if (edad < 20)
 	{
 		int auxDir = 0;
@@ -62,36 +63,36 @@ void SmartGhost::CambiaDir()
 	}
 	else
 	{
-		PacMan pac;
-		int contador = 0;
+		int contad = 0;
 		int j = 0;
 		float auxMax;
 		float distancia = 200000;
-		vector<int> posible;
+		vector<int> posibl;
 		for (int i = 0; i < 4; i++)
 		{
 			if (gueim->NextCell(PosX, PosY, i))
 			{
-				contador++;
-				posible.push_back(i);
+				contad++;
+				posibl.push_back(i);
 			}
 		}
-		while (j < posible.size())
+		while (j < posibl.size())
 		{
 			int dirX;
 			int dirY;
-			if (posible[j] == 0) { dirX = 1; dirY = 0; }
-			else if (posible[j] == 1) { dirX = 0; dirY = 1; }
-			else if (posible[j] == 2) { dirX = -1; dirY = 0; }
-			else if (posible[j] == 3) { dirX = 0; dirY = -1; }
-			float numX = gueim->PacManX() - (PosX+dirX);
-			float numY = gueim->PacManY() - (PosY+dirY);
-			float distAux = sqrt(powf(numX, 2) + powf(numY, 2));
+			if (posibl[j] == 0) { dirX = 1; dirY = 0; }
+			else if (posibl[j] == 1) { dirX = 0; dirY = 1; }
+			else if (posibl[j] == 2) { dirX = -1; dirY = 0; }
+			else if (posibl[j] == 3) { dirX = 0; dirY = -1; }
+			float numX = abs(gueim->PacManY() - (PosY+dirX));
+			float numY = abs(gueim->PacManX() - (PosX+dirY));
+			float distAux = sqrtf(powf(numX, 2) + powf(numY, 2));
 			if (distAux < distancia)
 			{
 				distancia = distAux;
-				dir = posible[j];
+				dir = posibl[j];
 			}
+			j++;
 		}
 	}
 }
@@ -105,7 +106,7 @@ int SmartGhost::GetAnim()
 
 void SmartGhost::Mueve(int fils, int cols)
 {
-
+	cout << "alog";
 	CambiaDir();
 	if (dir == 0)
 	{
@@ -141,26 +142,30 @@ void SmartGhost::SetInicio() {
 
 void SmartGhost::RenderGhost(SDL_Rect rekt, int d, PacMan* pacman)
 {
+	
 	if (edad <= 20)
 	{
-		rekt.w = 20 / edad;
-		rekt.h = 20 / edad;
+		rekt.x += rekt.w / 2 -edad / 2;
+		rekt.y += rekt.w / 2 - edad / 2;
+		rekt.w = edad;
+		rekt.h = edad;
 	}
 	if (pacman->Come)
 	{
-		text->RenderFrame(12, 0, rekt, rendering);
+		text->RenderFrame(12, 0, rekt, render);
 	}
 	else
 	{
 		if (GetAnim() == 0)
-			text->RenderFrame(d * 2, 0, rekt, rendering);
+			text->RenderFrame(d * 2, 0, rekt, render);
 		else
-			text->RenderFrame(d * 2 + 1, 0, rekt, rendering);
+			text->RenderFrame(d * 2 + 1, 0, rekt, render);
 	}
+	SumaEdad();
 }
 //Pinta al fantasma y lo anima en sus distintos casos
 
-void SmartGhost::render() {
+void SmartGhost::Render() {
 
 }
 

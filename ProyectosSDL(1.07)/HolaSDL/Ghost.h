@@ -11,7 +11,6 @@ private:
 
 	//Texture* textGhost = new Texture();
 
-	SDL_Renderer* rendering = nullptr;
 
 	//posiciones actuales e iniciales del fantasma
 
@@ -50,7 +49,7 @@ public:
 	void CambiaDir();
 	void SetInicio();
 
-	void render();
+	void Render();
 	void update();
 	bool loadFromFile(string filename);
 	bool saveToFile(string filename);

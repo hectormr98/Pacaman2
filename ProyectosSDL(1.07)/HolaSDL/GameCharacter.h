@@ -6,6 +6,7 @@ using namespace std;
 class GameCharacter : public GameObject
 {
 public:
+	GameCharacter();
 	GameCharacter(int x, int y, Game* game, SDL_Renderer* rend);
 	~GameCharacter();
 protected:
