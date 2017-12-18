@@ -7,7 +7,7 @@ GameCharacter::GameCharacter() : GameObject() {
 	render = nullptr;
 }
 
-GameCharacter::GameCharacter(int posx, int posy, Game* game, SDL_Renderer* rend) : GameObject()
+GameCharacter::GameCharacter(int posx, int posy, Game* game) : GameObject()
 {
 	PosX = posx;
 	PosY = posy;
@@ -21,7 +21,6 @@ GameCharacter::GameCharacter(int posx, int posy, Game* game, SDL_Renderer* rend)
 
 	gueim = game;
 
-	render = rend;
 	/*GO->render = {
 	
 	};*/

@@ -18,6 +18,5 @@ public:
 
 protected:
 	Game* gueim = nullptr;
-
 };
 

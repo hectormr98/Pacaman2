@@ -6,8 +6,7 @@ c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\g
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(10): error C2061: error de sintaxis: identificador 'Game'
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
   SmartGhost.cpp
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(6): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(12): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(6): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 4 argumentos
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(79): warning C4018: '<': no coinciden signed/unsigned
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(87): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.cpp(88): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
@@ -18,13 +17,9 @@ c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\s
   PacMan.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(5): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\pacman.cpp(15): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
   Ghost.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\ghost.cpp(5): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
-c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\ghost.cpp(11): error C2661: 'GameCharacter::GameCharacter': ninguna función sobrecargada acepta 3 argumentos
   GameObject.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(7): error C2504: 'GameObject': clase base sin definir
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.h(10): error C2061: error de sintaxis: identificador 'Game'
@@ -35,6 +30,12 @@ c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\s
   GameCharacter.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(7): error C2504: 'GameCharacter': clase base sin definir
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\smartghost.h(44): error C2061: error de sintaxis: identificador 'PacMan'
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.cpp(24): error C2563: hay una falta de correspondencia en la lista de parámetros formales
+c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.cpp(24): error C2568: '=': no se puede resolver la sobrecarga de funciones
+  c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.cpp(24): note: puede ser 'std::reverse_iterator<const _Elem*> std::rend(std::initializer_list<_Elem>)'
+  c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.cpp(24): note: o       'std::reverse_iterator<_Ty*> std::rend(_Ty (&)[_Size])'
+  c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.cpp(24): note: o       'unknown-type std::rend(const _Container &)'
+  c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gamecharacter.cpp(24): note: o       'unknown-type std::rend(_Container &)'
   Game.cpp
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C2143: error de sintaxis: falta ';' delante de '*'
 c:\users\hecto\universidad\2º\tpv\pacaman2\pacaman\proyectossdl(1.07)\holasdl\gameobject.h(20): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int

@@ -3,7 +3,7 @@
 #include"GameMap.h"
 #include "PacMan.h"
 
-SmartGhost::SmartGhost() : GameCharacter(0, 0, nullptr) {
+SmartGhost::SmartGhost() : GameCharacter(0, 0, nullptr, nullptr) {
 	IniX = IniY = PosX = PosY = 0;
 }
 //constructora default que deja el fantasma en la posicion (0,0)
